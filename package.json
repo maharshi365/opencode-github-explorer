@@ -2,22 +2,51 @@
   "name": "opencode-github-explorer",
   "version": "1.0.0",
   "type": "module",
-  "description": "OpenCode plugin for exploring public GitHub repositories",
+  "description": "OpenCode plugin for exploring public GitHub repositories with automatic cloning and specialized exploration agent",
   "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src/**/*.ts",
+    "README.md",
+    "LICENSE",
+    "QUICKSTART.md"
+  ],
   "scripts": {
     "dev": "bun run src/index.ts",
     "test": "bun test",
     "test:watch": "bun test --watch",
-    "typecheck": "bun tsc --noEmit"
+    "typecheck": "bunx tsc --noEmit"
   },
   "keywords": [
     "opencode",
+    "opencode-plugin",
     "plugin",
     "github",
-    "explorer"
+    "explorer",
+    "code-analysis",
+    "repository",
+    "git",
+    "ai",
+    "agent"
   ],
-  "author": "",
+  "author": "maharshi365",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharshi365/opencode-github-explorer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maharshi365/opencode-github-explorer/issues"
+  },
+  "homepage": "https://github.com/maharshi365/opencode-github-explorer#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
   "devDependencies": {
     "@opencode-ai/plugin": "latest",
     "@types/bun": "latest"
